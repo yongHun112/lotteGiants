@@ -31,7 +31,11 @@ body {
   display: flex;
   flex-direction: column;
   color: #fff;
-  background-color: rgba(6, 24, 48, 0.3843137255);
+  background: linear-gradient(to bottom, #061830, rgba(6, 24, 48, 0.1882352941));
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
 }
 .wrap .header.active {
   background-color: #061830;
@@ -178,10 +182,17 @@ body {
   left: 50%;
   transform: translateX(-50%);
   top: 30%;
+  transition: 0.5s;
 }
 .wrap .header .inner .option .menu_btn .bottom {
   bottom: 30%;
   top: auto;
+}
+.wrap .header .inner .option .menu_btn:hover .top {
+  top: 40%;
+}
+.wrap .header .inner .option .menu_btn:hover .bottom {
+  bottom: 40%;
 }
 .wrap .header .top_header {
   width: 100%;
@@ -259,4 +270,13 @@ body {
 .wrap .header .top_header .right_wrap .lang_btn a p {
   font-size: 1.4rem;
   color: #061830;
+}
+.wrap .main {
+  width: 100%;
+}
+.wrap .main .main_visual {
+  width: 100%;
+}
+.wrap .main .main_visual .image_wrap a img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

@@ -38,7 +38,11 @@ body {
         display: flex;
         flex-direction: column;
         color: #fff;
-        background-color: #06183062;
+        background: linear-gradient(to bottom, #061830, #06183030);
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 0.3s;
 
         &.active {
             background-color: #061830;
@@ -223,11 +227,22 @@ body {
                         left: 50%;
                         transform: translateX(-50%);
                         top: 30%;
+                        transition: 0.5s;
                     }
 
                     .bottom {
                         bottom: 30%;
                         top: auto;
+                    }
+
+                    &:hover {
+                        .top {
+                            top: 40%;
+                        }
+                        
+                        .bottom {
+                            bottom: 40%;
+                        }
                     }
 
 
@@ -337,4 +352,23 @@ body {
             }
         }
     }
+
+    .main {
+        width: 100%;
+
+        .main_visual {
+            width: 100%;
+
+            .image_wrap {
+
+                a {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+
 }

@@ -22,16 +22,36 @@
 
                 })
             })
- 
+
             navBtn.forEach((a, index) => {
                 a.addEventListener('mouseleave', () => {
                     navList[index].classList.remove('active');
                     header.classList.remove('active');
 
                 })
-            }) 
+            })
 
-            
+/*             // 높이값 구하기 height()
+            console.log($('.depth-02').height())
+            let navHeight = $('.depth-02').height() + 40;
+
+            // $('.nav_bg').height(navHeight); 
+            $('.nav_bg').css('height', navHeight);
+
+
+            $('.gnb > li').mouseenter(function () {
+                $('.depth-02').stop().slideDown();
+                $('.header .nav_bg').stop().slideDown();
+            });
+
+
+            $('.gnb > li').mouseleave(function () {
+                $('.depth-02').stop().slideUp();
+                $('.header .nav_bg').stop().slideUp();
+            }); */
+
+
+
 
             console.log()
         }
@@ -392,6 +412,15 @@
 
 
         </header> <!-- header end -->
+
+        <main class="main">
+            <section class="main_visual">
+                <!-- swiper 형식 -->
+                <div class="image_wrap">
+                    <a href="#"><img src="img/main_image01.jpg" alt="메인이미지1"></a>
+                </div> <!-- image_wrap end -->
+            </section> <!-- main_visual end -->
+        </main> <!-- main end -->
     </div> <!-- wrap end -->
 </body>
 
