@@ -7,11 +7,42 @@
     <title>Giants</title>
     <link rel="stylesheet" href="css/main.scss">
     <link rel="stylesheet" href="css/main.css">
+
+    <script>
+        window.onload = () => {
+            let navBtn = document.querySelectorAll('.header .nav .gnb > li');
+            let header = document.querySelector('.header');
+            let navList = document.querySelectorAll('.header .nav .depth_02');
+            let navHeight = document.querySelector('.header .nav_background');
+
+            navBtn.forEach((a, index) => {
+                a.addEventListener('mouseenter', () => {
+                    navList[index].classList.add('active');
+                    header.classList.add('active');
+
+                })
+            })
+ 
+            navBtn.forEach((a, index) => {
+                a.addEventListener('mouseleave', () => {
+                    navList[index].classList.remove('active');
+                    header.classList.remove('active');
+
+                })
+            }) 
+
+            
+
+            console.log()
+        }
+    </script>
 </head>
 
 <body>
     <div class="wrap">
         <header class="header">
+            <div class="nav_background"></div>
+
             <div class="inner">
                 <h1 class="logo">
                     <img src="img/logo_header.png" alt="logo_img">
@@ -28,7 +59,7 @@
                                         <li><a href="#">연혁</a></li>
                                         <li><a href="#">구단 미션&비전</a></li>
                                         <li><a href="#">안전보건경영방침</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                    </ul> <!-- depth_03 end -->
                                 </li>
 
                                 <li>
@@ -40,7 +71,7 @@
                                         <li><a href="#">구장샵</a></li>
                                         <li><a href="#">식음료</a></li>
                                         <li><a href="#">KBO 경기장 안전정책</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                    </ul> <!-- depth_03 end -->
                                 </li>
 
                                 <li>
@@ -49,7 +80,7 @@
                                         <li><a href="#">엠블럼</a></li>
                                         <li><a href="#">캐릭터</a></li>
                                         <li><a href="#">자이언츠 폰트</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                    </ul> <!-- depth_03 end -->
                                 </li>
 
                                 <li>
@@ -57,15 +88,15 @@
                                         <li><a href="#" class="title">사회공헌</a></li>
                                         <li><a href="#">G-love 소개</a></li>
                                         <li><a href="#">G-love 활동</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                    </ul> <!-- depth_03 end -->
                                 </li>
 
                                 <li>
                                     <ul class="depth_03">
                                         <li><a href="#" class="title">패밀리</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                    </ul> <!-- depth_03 end -->
                                 </li>
-                            </ul>   <!-- depth_02 end -->
+                            </ul> <!-- depth_02 end -->
                         </li>
 
                         <li><a href="#" class="depth_01">기록실</a>
@@ -76,7 +107,7 @@
                                         <li><a href="#">팀 순위</a></li>
                                         <li><a href="#">팀간 승패표</a></li>
                                         <li><a href="#">팀기록</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                    </ul> <!-- depth_03 end -->
                                 </li>
 
                                 <li>
@@ -86,7 +117,7 @@
                                         <li><a href="#">팀 투수</a></li>
                                         <li><a href="#">전체타자</a></li>
                                         <li><a href="#">전체투수</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                    </ul> <!-- depth_03 end -->
                                 </li>
 
                                 <li>
@@ -98,7 +129,7 @@
                                         <li><a href="#">요일별</a></li>
                                         <li><a href="#">월별</a></li>
                                         <li><a href="#">관중동원 순위</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                    </ul> <!-- depth_03 end -->
                                 </li>
 
                                 <li>
@@ -110,61 +141,256 @@
                                         <li><a href="#">선수이동</a></li>
                                         <li><a href="#">전지훈련현황</a></li>
                                         <li><a href="#">타이틀 및 수상현황</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                    </ul> <!-- depth_03 end -->
                                 </li>
-                            </ul>   <!-- depth_02 end -->
+                            </ul> <!-- depth_02 end -->
                         </li>
 
                         <li><a href="#" class="depth_01">이벤트</a>
                             <ul class="depth_02">
                                 <li>
                                     <ul class="depth_03">
-                                        <li><a href="#" class="title">팀기록</a></li>
-                                        <li><a href="#">팀 순위</a></li>
-                                        <li><a href="#">팀간 승패표</a></li>
-                                        <li><a href="#">팀기록</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                        <li><a href="#" class="title">이벤트</a></li>
+                                        <li><a href="#">진행중인 이벤트</a></li>
+                                        <li><a href="#">종료된 이벤트</a></li>
+                                        <li><a href="#">당첨자 발표</a></li>
+                                    </ul> <!-- depth_03 end -->
                                 </li>
 
                                 <li>
                                     <ul class="depth_03">
-                                        <li><a href="#" class="title">선수기록</a></li>
-                                        <li><a href="#">팀 타자</a></li>
-                                        <li><a href="#">팀 투수</a></li>
-                                        <li><a href="#">전체타자</a></li>
-                                        <li><a href="#">전체투수</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                        <li><a href="#" class="title">설문조사</a></li>
+                                    </ul> <!-- depth_03 end -->
                                 </li>
 
                                 <li>
                                     <ul class="depth_03">
-                                        <li><a href="#" class="title">조건별기록</a></li>
-                                        <li><a href="#">상대팀별</a></li>
-                                        <li><a href="#">홈원정별</a></li>
-                                        <li><a href="#">주/야간별</a></li>
-                                        <li><a href="#">요일별</a></li>
-                                        <li><a href="#">월별</a></li>
-                                        <li><a href="#">관중동원 순위</a></li>
-                                    </ul>   <!-- depth_03 end -->
+                                        <li><a href="#" class="title">드림오브그라운드</a></li>
+                                        <li><a href="#">그림·줄넘기 대회</a></li>
+
+
+                                    </ul> <!-- depth_03 end -->
                                 </li>
 
-                                <li>
-                                    <ul class="depth_03">
-                                        <li><a href="#" class="title">역대기록</a></li>
-                                        <li><a href="#">역대성적</a></li>
-                                        <li><a href="#">역대선수단</a></li>
-                                        <li><a href="#">캐치프레이즈</a></li>
-                                        <li><a href="#">선수이동</a></li>
-                                        <li><a href="#">전지훈련현황</a></li>
-                                        <li><a href="#">타이틀 및 수상현황</a></li>
-                                    </ul>   <!-- depth_03 end -->
-                                </li>
-                            </ul>   <!-- depth_02 end -->
+                            </ul> <!-- depth_02 end -->
                         </li>
-                    
+
+                        <li><a href="#" class="depth_01">팬</a>
+                            <ul class="depth_02">
+                                <li>
+                                    <ul class="depth_03">
+                                        <li><a href="#" class="title">팬 게시판</a></li>
+                                        <li><a href="#">팀 순위</a></li>
+                                        <li><a href="#">회원안내</a></li>
+                                        <li><a href="#">휴면전환안내</a></li>
+                                        <li><a href="#">자이언츠 소셜</a></li>
+                                    </ul> <!-- depth_03 end -->
+                                </li>
+
+                                <li>
+                                    <ul class="depth_03">
+                                        <li><a href="#" class="title">팬 갤러리</a></li>
+                                    </ul> <!-- depth_03 end -->
+                                </li>
+
+                                <li>
+                                    <ul class="depth_03">
+                                        <li><a href="#" class="title">FAQ</a></li>
+                                    </ul> <!-- depth_03 end -->
+                                </li>
+
+                                <li>
+                                    <ul class="depth_03">
+                                        <li><a href="#" class="title">응원</a></li>
+                                        <li><a href="#">응원단소개</a></li>
+                                        <li><a href="#">응원가 저작자</a></li>
+
+                                    </ul> <!-- depth_03 end -->
+                                </li>
+
+                                <li>
+                                    <ul class="depth_03">
+                                        <li><a href="#" class="title">다운로드</a></li>
+                                        <li><a href="#">데스크탑</a></li>
+                                        <li><a href="#">스마트폰</a></li>
+
+                                    </ul> <!-- depth_03 end -->
+                                </li>
+                            </ul> <!-- depth_02 end -->
+                        </li>
+
+                        <li><a href="#" class="depth_01">티켓</a>
+                            <ul class="depth_02">
+                                <li>
+                                    <ul class="depth_03">
+                                        <li><a href="#" class="title">일반티켓</a></li>
+                                        <li><a href="#">사직구장 요금안내</a></li>
+                                        <li><a href="#">문수구장 요금안내</a></li>
+                                        <li><a href="#">좌석안내</a></li>
+                                        <li><a href="#">할인안내</a></li>
+                                        <li><a href="#">스카이박스</a></li>
+                                    </ul> <!-- depth_03 end -->
+                                </li>
+
+                                <li>
+                                    <ul class="depth_03">
+                                        <li><a href="#" class="title">시즌티켓</a></li>
+                                        <li><a href="#">시즌티켓</a></li>
+                                    </ul> <!-- depth_03 end -->
+                                </li>
+
+                                <li>
+                                    <ul class="depth_03">
+                                        <li><a href="#" class="title">단체관람</a></li>
+                                    </ul> <!-- depth_03 end -->
+                                </li>
+                            </ul> <!-- depth_02 end -->
+                        </li>
+
                     </ul> <!-- gnb end -->
                 </nav> <!-- nav end -->
+
+                <nav class="mobile_nav">
+                    <div class="mobile_wrap">
+                        <div class="mobile_title">
+                            <div class="title">
+                                <h2>ALL NAVIGATION</h2>
+                                <p>롯데자이언츠 메뉴를 한눈에 보세요!</p>
+                            </div> <!-- title end -->
+
+                            <a href="#" class="menu_btn close">
+                                <span class="top"></span>
+                                <span class="bottom"></span>
+                            </a> <!-- menu_btn end -->
+                        </div> <!-- mobile_title end -->
+
+                        <ul class="mobile_cont">
+                            <li>
+                                <ul class="mobile_cont2">
+                                    <li><a href="#" class="cont2_title">소개</a></li>
+                                    <li><a href="#">구단소개</a></li>
+                                    <li><a href="#">구장소개</a></li>
+                                    <li><a href="#">구단BI</a></li>
+                                    <li><a href="#">사회공헌</a></li>
+                                    <li><a href="#">패밀리</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul class="mobile_cont2">
+                                    <li><a href="#" class="cont2_title">경기정보</a></li>
+                                    <li><a href="#">정규리그</a></li>
+                                    <li><a href="#">퓨처스리그</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul class="mobile_cont2">
+                                    <li><a href="#" class="cont2_title">기록실</a></li>
+                                    <li><a href="#">팀기록</a></li>
+                                    <li><a href="#">선수기록</a></li>
+                                    <li><a href="#">조건별기록</a></li>
+                                    <li><a href="#">역대기록</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul class="mobile_cont2">
+                                    <li><a href="#" class="cont2_title">선수단</a></li>
+                                    <li><a href="#">감독</a></li>
+                                    <li><a href="#">코치</a></li>
+                                    <li><a href="#">투수</a></li>
+                                    <li><a href="#">포수</a></li>
+                                    <li><a href="#">내야수</a></li>
+                                    <li><a href="#">외야수</a></li>
+                                    <li><a href="#">전체선수</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul class="mobile_cont2">
+                                    <li><a href="#" class="cont2_title">이벤트</a></li>
+                                    <li><a href="#">이벤트</a></li>
+                                    <li><a href="#">설문조사</a></li>
+                                    <li><a href="#">드림오브그라운드</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul class="mobile_cont2">
+                                    <li><a href="#" class="cont2_title">팬</a></li>
+                                    <li><a href="#">팬 게시판</a></li>
+                                    <li><a href="#">팬 갤러리</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">응원</a></li>
+                                    <li><a href="#">다운로드</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul class="mobile_cont2">
+                                    <li><a href="#" class="cont2_title">미디어</a></li>
+                                    <li><a href="#">자이언츠뉴스</a></li>
+                                    <li><a href="#">자이언츠포토</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul class="mobile_cont2">
+                                    <li><a href="#" class="cont2_title">티켓</a></li>
+                                    <li><a href="#">일반티켓</a></li>
+                                    <li><a href="#">시즌티켓</a></li>
+                                    <li><a href="#">단체관람</a></li>
+                                </ul>
+                            </li>
+                        </ul> <!-- mobile_cont end -->
+                    </div> <!-- mobile_wrap end -->
+                </nav> <!-- mobile_nav end -->
+
+
+                <div class="option">
+                    <a href="#" class="search_box">
+                        <img src="img/search_icon.png" alt="search_icon">
+                        <span>검색</span>
+                    </a> <!-- search_box end -->
+
+                    <a href="#" class="menu_btn">
+                        <span class="top"></span>
+                        <span class="bottom"></span>
+                    </a> <!-- close_icon end -->
+                </div> <!-- option end -->
             </div> <!-- inner end -->
+
+            <div class="top_header">
+                <div class="left_wrap">
+
+                </div>
+
+                <div class="click_btn">
+                    <a href="#">
+                        <img src="img/mouse_icon.png" alt="mouse_icon">
+                        <p>장애인예매</p>
+                    </a>
+                </div> <!-- click_btn end -->
+
+                <div class="right_wrap">
+                    <div class="log_btn">
+                        <a href="#">
+                            <img src="img/user_icon.png" alt="user_icon">
+                            <p>로그인 / 회원가입</p>
+                        </a>
+                    </div> <!-- log_btn end -->
+
+                    <div class="lang_btn">
+                        <a href="#">
+                            <img src="img/earth_icon.png" alt="earth_icon">
+                            <p>English</p>
+                        </a>
+                    </div> <!-- lang_btn -->
+                </div> <!-- right_wrap end -->
+            </div> <!-- top_header -->
+
+
         </header> <!-- header end -->
     </div> <!-- wrap end -->
 </body>

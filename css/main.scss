@@ -8,7 +8,333 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Giants';
+    src: url("./font/Giants-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 html,
 body {
-    font-family: 'GongGothicMedium';
+    font-size: 62.5%;
+}
+
+.mobile_nav {
+    display: none;
+}
+
+
+.wrap {
+    .header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        background-color: #06183062;
+
+        &.active {
+            background-color: #061830;
+        }
+
+        .nav_background {
+            width: 100%;
+            height: 30rem;
+            background-color: #061830;
+            position: absolute;
+            left: 0;
+            top: 4rem;
+            display: none;
+
+        } 
+
+        .inner {
+            max-width: 154rem;
+            width: calc(100% - 60px);
+            margin: 0 auto;
+            height: 8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            order: 2;
+
+
+            .nav {
+                height: 100%;
+
+                .gnb {
+                    display: flex;
+                    justify-content: center;
+                    height: 100%;
+
+                    &>li {
+                        padding: 0 5rem;
+
+
+                        &.active {
+                            color: #DC032E;
+
+                        }
+                    }
+
+                    .depth_01 {
+                        font-weight: 600;
+                        font-size: 2rem;
+                        color: #fff;
+                        line-height: 8rem;
+                        position: relative;
+                        overflow: hidden;
+                        transition: 0.3s;
+
+
+
+                        &::after {
+                            content: '';
+                            width: 0.1%;
+                            height: 0.2rem;
+                            position: absolute;
+                            bottom: -0.5rem;
+                            left: 0;
+                            background-color: #DC032E;
+                            transition: 0.3s;
+
+                        }
+
+                        &:hover {
+                            color: #DC032E;
+
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+
+                    }
+
+
+                    .depth_02 {
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        opacity: 0;
+                        visibility: hidden;
+                        width: 128rem;
+                        background-color: #061830;
+                        /* height: 40rem; */
+
+                        &>li {
+                            width: 24%;
+                        }
+
+
+                        &.active {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                        &>li {
+                            border-left: 1px solid #ffffff1e;
+                            border-bottom: 1px solid #ffffff0a;
+
+                        }
+
+                        &>li:last-child {
+                            border-right: 1px solid #ffffff1e;
+                        }
+
+                        .depth_03 {
+                            width: 100%;
+
+                            li {
+                                a {
+                                    display: block;
+                                    padding: 2rem 2rem;
+                                    font-size: 1.8rem;
+                                    font-family: 'Pretendard-Regular';
+                                    text-align: center;
+                                }
+                            }
+
+                            .title {
+                                background-color: #DC032E;
+                                font-family: 'Giants';
+                                font-size: 1.8rem;
+                                font-weight: 300;
+                            }
+                        }
+
+
+                    }
+
+                }
+
+            }
+
+            .option {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+
+                .search_box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    background-color: #d105278a;
+                    padding: 0.8rem 2.5rem;
+                    border-radius: 2rem;
+
+                    &:hover {
+                        background-color: #d10527ee;
+                    }
+                    span {
+                        font-size: 1.6rem;
+                        font-family: 'Pretendard-Regular';
+                        font-weight: 500;
+                    }
+
+                    img {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                    }
+                }
+
+                .menu_btn {
+                    width: 4rem;
+                    height: 4rem;
+                    position: relative;
+
+                    .top,
+                    .bottom {
+                        position: absolute;
+                        width: 3rem;
+                        height: 0.2rem;
+                        background-color: #fff;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: 30%;
+                    }
+
+                    .bottom {
+                        bottom: 30%;
+                        top: auto;
+                    }
+
+
+
+                }
+
+            }
+        }
+
+        .top_header {
+            width: 100%;
+            padding: 0 19rem;
+            height: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            order: 1;
+            background-color: #061830;
+
+            .left_wrap {
+                width: 24.6rem;
+                height: 100%;
+                opacity: 0;
+            }
+
+            .click_btn {
+                height: 100%;
+                background-color: #153663;
+
+                a {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 2rem;
+                    gap: 1rem;
+
+                    p {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        font-family: 'Pretendard-Regular';
+                        
+                    }
+
+                    img {
+                        width: 2rem;
+                    }
+
+                }
+            }
+
+            .right_wrap {
+                display: flex;
+                align-items: center;
+                gap: 3rem;
+                font-family: 'Pretendard-Regular';
+                height: 100%;
+
+
+                .log_btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.5rem;
+
+                        p {
+                            font-size: 1.4rem;
+                        }
+
+                    }
+
+
+                }
+
+                .lang_btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+                        background-color: #fff;
+                        padding: 0.3rem 1rem;
+                        border-radius: 2rem;
+
+                        p {
+                            font-size: 1.4rem;
+                            color: #061830;
+
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+    }
 }
