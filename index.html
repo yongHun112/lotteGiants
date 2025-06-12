@@ -7,6 +7,7 @@
     <title>Giants</title>
     <link rel="stylesheet" href="css/main.scss">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -32,7 +33,6 @@
                 })
             })
 
-
             var swiper = new Swiper(".mainSwiper", {
                 slidesPerView: 1,
                 spaceBetween: 30,
@@ -41,6 +41,14 @@
                     el: ".swiper-pagination",
                     clickable: true,
                 },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            var swiper = new Swiper(".dateSwiper", {
+                slidesPerView: 2.95,
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
@@ -409,16 +417,38 @@
 
         <main class="main">
             <section class="main_visual">
+
                 <div class="swiper mainSwiper">
                     <div class="swiper-wrapper">
-                        
                         <div class="swiper-slide">
-                            <a href="#"><img src="img/main_image01.jpg" alt="메인비쥬얼이미지1"></a>
-                        </div>  <!-- swiper-slide end -->
+                            <a href="#">
+                                <img src="img/main_image01.jpg" alt="메인비주얼 이미지">
+                            </a>
+                        </div> <!-- swiper=slide end -->
 
                         <div class="swiper-slide">
-                            <a href="#"><img src="img/bg_main_visual_20250318.jpg" alt=""></a>
-                        </div>  <!-- swiper-slide end -->
+                            <a href="#">
+                                <img src="img/bg_main_visual_20250318.jpg" alt="메인비주얼 이미지">
+                            </a>
+                        </div> <!-- swiper=slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="img/bg_main_visual_20250516.png" alt="메인비주얼 이미지">
+                            </a>
+                        </div> <!-- swiper=slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="img/bg_main_visual_20250402.jpg" alt="메인비주얼 이미지">
+                            </a>
+                        </div> <!-- swiper=slide end -->
+
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="img/bg_main_visual_20250502.jpg" alt="메인비주얼 이미지">
+                            </a>
+                        </div> <!-- swiper=slide end -->
 
                     </div>
                     <div class="swiper-button-next"></div>
@@ -426,6 +456,206 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </section> <!-- main_visual end -->
+
+            <section class="play_date">
+                <div class="inner">
+                    <div class="title">
+                        <h2>경기 일정</h2>
+                        <p>롯데자이언츠 정규 리그 일정</p>
+                    </div> <!-- title end -->
+
+                    <div class="swiper dateSwiper">
+                        <div class="swiper-wrapper date_wrap">
+                            <div class="swiper-slide box1">
+                                <h3>2025.06.11 (수) 18:30</h3>
+
+                                <div class="center">
+                                    <div class="image">
+                                        <img src="img/ico_giants.png" alt="롯데 자이언츠 아이콘">
+                                        <span>롯데</span>
+                                    </div> <!-- image end -->
+
+                                    <div class="score_box game_end">
+                                        <span>[ 수원 ]</span>
+                                        <div class="score">
+                                            <strong class="win">4</strong>
+                                            <strong>:</strong>
+                                            <strong>3</strong>
+                                        </div> <!-- score end -->
+                                    </div> <!-- score_box end -->
+
+                                    <div class="image lose">
+                                        <img src="img/ico_wiz.png" alt="kt위즈 아이콘">
+                                        <span>Kt</span>
+                                    </div> <!-- image end -->
+                                </div> <!-- center end -->
+
+                                <div class="result result_after">
+                                    <span class="end">경기종료</span>
+                                </div> <!-- result -->
+                            </div> <!-- box 1 -->
+
+                            <div class="swiper-slide box2">
+                                <h3>2025.06.12 (목) 18:30</h3>
+
+                                <div class="center">
+                                    <div class="image">
+                                        <img src="img/ico_giants.png" alt="롯데 자이언츠 아이콘">
+                                        <span>롯데</span>
+                                    </div> <!-- image end -->
+
+                                    <div class="score_box vs">
+                                        <span>[ 수원 ]</span>
+                                        <div class="score">
+                                            <strong>V</strong>
+                                            <strong>S</strong>
+                                        </div> <!-- score end -->
+                                    </div> <!-- score_box end -->
+
+                                    <div class="image">
+                                        <img src="img/ico_wiz.png" alt="kt위즈 아이콘">
+                                        <span>Kt</span>
+                                    </div> <!-- image end -->
+                                </div> <!-- center end -->
+
+                                <div class="result result_start">
+                                    <span>경기예정</span>
+                                </div> <!-- result -->
+                            </div> <!-- box 2 -->
+
+                            <div class="swiper-slide box3">
+                                <h3>2025.06.13 (금) 16:59</h3>
+
+                                <div class="center">
+                                    <div class="image">
+                                        <img src="img/ico_giants.png" alt="롯데 자이언츠 아이콘">
+                                        <span>롯데</span>
+                                    </div> <!-- image end -->
+
+                                    <div class="score_box vs">
+                                        <span>[ 문학 ]</span>
+                                        <div class="score ">
+                                            <strong>V</strong>
+                                            <strong>S</strong>
+                                        </div> <!-- score end -->
+                                    </div> <!-- score_box end -->
+
+                                    <div class="image">
+                                        <img src="img/ico_landers.png" alt="ssg랜더스 아이콘">
+                                        <span>SSG</span>
+                                    </div> <!-- image end -->
+                                </div> <!-- center end -->
+
+                                <div class="result result_before">
+                                    <span>경기예정</span>
+                                </div> <!-- result -->
+                            </div> <!-- box 3 -->
+
+                            <div class="swiper-slide box4">
+                                <h3>2025.06.14 (토) 17:00</h3>
+
+                                <div class="center">
+                                    <div class="image">
+                                        <img src="img/ico_giants.png" alt="롯데 자이언츠 아이콘">
+                                        <span>롯데</span>
+                                    </div> <!-- image end -->
+
+                                    <div class="score_box vs">
+                                        <span>[ 문학 ]</span>
+                                        <div class="score ">
+                                            <strong>V</strong>
+                                            <strong>S</strong>
+                                        </div> <!-- score end -->
+                                    </div> <!-- score_box end -->
+
+                                    <div class="image">
+                                        <img src="img/ico_landers.png" alt="ssg랜더스 아이콘">
+                                        <span>SSG</span>
+                                    </div> <!-- image end -->
+                                </div> <!-- center end -->
+
+                                <div class="result result_before">
+                                    <span>경기예정</span>
+                                </div> <!-- result -->
+                            </div> <!-- box 4 -->
+
+                            <div class="swiper-slide box5">
+                                <h3>2025.06.15 (일) 17:00</h3>
+
+                                <div class="center">
+                                    <div class="image">
+                                        <img src="img/ico_giants.png" alt="롯데 자이언츠 아이콘">
+                                        <span>롯데</span>
+                                    </div> <!-- image end -->
+
+                                    <div class="score_box vs">
+                                        <span>[ 문학 ]</span>
+                                        <div class="score ">
+                                            <strong>V</strong>
+                                            <strong>S</strong>
+                                        </div> <!-- score end -->
+                                    </div> <!-- score_box end -->
+
+                                    <div class="image">
+                                        <img src="img/ico_landers.png" alt="ssg랜더스 아이콘">
+                                        <span>SSG</span>
+                                    </div> <!-- image end -->
+                                </div> <!-- center end -->
+
+                                <div class="result result_before">
+                                    <span>경기예정</span>
+                                </div> <!-- result -->
+                            </div> <!-- box 5 -->
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div> <!-- dateSwiper end -->
+
+                    <div class="nav_wrap">
+                        <ul class="nav_tap">
+                            <li class="nav_box">
+                                <a href="#">
+                                    <img src="img/Layer1.png" alt="G-LOVE 아이콘">
+                                    <p>G-LOVE</p>
+                                </a>
+                            </li> <!-- nav_box end -->
+
+                            <li class="nav_box">
+                                <a href="#">
+                                    <img src="img/image 7.png" alt="티켓예매 아이콘">
+                                    <p>티켓예매</p>
+                                </a>
+                            </li> <!-- nav_box end -->
+
+                            <li class="nav_box">
+                                <a href="#">
+                                    <img src="img/image 8.png" alt="경기일정 아이콘">
+                                    <p>경기일정</p>
+                                </a>
+                            </li> <!-- nav_box end -->
+
+                            <li class="nav_box">
+                                <a href="#">
+                                    <img src="img/ico_quick_08 1.png" alt="온라인샵 아이콘">
+                                    <p>온라인샵</p>
+                                </a>
+                            </li> <!-- nav_box end -->
+
+                            <li class="nav_box">
+                                <a href="#">
+                                    <img src="img/ico_quick_08 1 (1).png" alt="윌비플레이 아이콘">
+                                    <p>윌비플레이</p>
+                                </a>
+                            </li> <!-- nav_box end -->
+                        </ul> <!-- nav_tap end -->
+                    </div> <!-- nav_wrap end  -->
+
+                </div> <!-- inner end -->
+            </section> <!-- play_date end -->
+
+
+            section.
         </main> <!-- main end -->
     </div> <!-- wrap end -->
 </body>
